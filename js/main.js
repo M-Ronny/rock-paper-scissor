@@ -23,10 +23,29 @@ function checkResult(player, computer) {
     if (player === 'rock' && computer === 'scissor' || player === 'paper' && computer === 'rock' || player === 'scissor' && computer === 'paper') {
         p.textContent = 'POINT PLAYER'
         playerScore.textContent = Number(playerScore.textContent) + 1
+        checkWinner(Number(playerScore.textContent), Number(computerScore.textContent))
     } else if (computer === 'rock' && player === 'scissor' || computer === 'paper' && player === 'rock' || computer === 'scissor' && player === 'paper') {
         p.textContent = 'POINT COMPUTER'
         computerScore.textContent = Number(computerScore.textContent) + 1
+        checkWinner(Number(playerScore.textContent), Number(computerScore.textContent))
     } else {
         p.textContent = 'DRAW NO POINT'
+    }
+}
+
+function checkWinner(ps, cs) {
+    console.log(ps)
+    console.log(cs)
+
+    if (ps == 5) {
+        p.textContent = 'PLAYER WINS!'
+        playerScore.textContent = 0
+        computerScore.textContent = 0
+    }
+
+    if (cs == 5) {
+        p.textContent = 'COMPUTER WINS!'
+        computerScore.textContent = 0
+        playerScore.textContent = 0
     }
 }
