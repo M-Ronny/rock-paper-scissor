@@ -1,6 +1,6 @@
 const button = document.querySelectorAll('.btn')
-const playerScore = document.querySelector('.player')
-const computerScore = document.querySelector('.computer')
+const playerScore = document.querySelector('.playerScore')
+const computerScore = document.querySelector('.computerScore')
 const p = document.querySelector('p')
 
 button.forEach(element => {
