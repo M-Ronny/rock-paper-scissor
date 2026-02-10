@@ -5,7 +5,7 @@ const querystring = require('querystring')
 const figlet = require('figlet')
 
 const server = http.createServer((req, res) => {
-    function checkpage(page, content) {
+    function checkPage(page, content) {
         fs.readFile(page, function(err, data) {
             res.writeHead(200, {'Content-Type': content})
             res.write(data)
@@ -18,7 +18,7 @@ const server = http.createServer((req, res) => {
     console.log(page)
 
     if (page === '/') {
-        checkpage('index.html', 'text/html')
+        checkPage('index.html', 'text/html')
     }
     else if (page === '/api') {
         let result;
@@ -46,7 +46,7 @@ const server = http.createServer((req, res) => {
         }) 
     }
     else if (page === '/js/main.js') {
-        checkpage('js/main.js', 'text/javascript')
+        checkPage('js/main.js', 'text/javascript')
     }
     else {
         figlet('401!', function(err, data) {
