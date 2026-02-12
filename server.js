@@ -48,6 +48,18 @@ const server = http.createServer((req, res) => {
     else if (page === '/js/main.js') {
         checkPage('js/main.js', 'text/javascript')
     }
+    else if (page === '/images/rock.png') {
+        checkPage('images/rock.png', 'image/png')
+    } 
+    else if (page === '/images/paper.png') {
+        checkPage('images/paper.png', 'image/png')
+    }
+    else if (page === '/images/scissors.png') {
+        checkPage('images/scissors.png', 'image/png')
+    }
+    else if (page === '/images/background.jpg') {
+        checkPage('images/background.jpg', 'image/jpg')
+    }
     else {
         figlet('401!', function(err, data) {
             if (err) {
