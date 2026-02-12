@@ -1,0 +1,74 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+html {
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 100%;
+    background-attachment: fixed;
+}
+
+.scoreboard {
+    margin: 0 30%;
+    height: 350px;
+    background: rgb(66, 29, 29);
+    padding-top: 1%;
+    border-radius: 25px;
+}
+
+div {
+    float: left;
+    width: 50%;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+div, h1, p {
+    text-align: center;
+}
+
+h1, h2 {
+    color: white;
+}
+
+span {
+    display: block;
+    background: rgb(158, 157, 157);
+    border-radius: 15px;
+    margin: 0 35%;
+    color: yellow;
+    height: 120px;
+    font-size: 100px;
+}
+
+p {
+    font-size: 30px;
+}
+
+img {
+    width: 100%;
+}
+
+.item {
+    font-size: 20px;
+}
+
+button {
+    margin: 0 13%;
+    padding: 1%;
+    width: 7%;
+    background-color: rgb(180, 151, 113);
+    border: 10px solid rgb(99, 33, 33);
+    border-radius: 10px;
+    cursor: pointer;
+}
