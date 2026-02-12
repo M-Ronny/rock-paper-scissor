@@ -8,7 +8,7 @@ button.forEach(element => {
 })
 
 async function playGame() {
-    let playerChoose = event.target.value
+    let playerChoose = event.currentTarget.value
     const computer = 'bot'
     const res = await fetch(`/api?bot=${computer}`)
     const data = await res.json()
