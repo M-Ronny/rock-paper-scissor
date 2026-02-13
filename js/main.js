@@ -21,15 +21,15 @@ function checkResult(player, computer) {
     console.log(computer)
 
     if (player === 'rock' && computer === 'scissor' || player === 'paper' && computer === 'rock' || player === 'scissor' && computer === 'paper') {
-        p.textContent = 'POINT PLAYER'
+        p.textContent = `${player.toUpperCase()} BEATS ${computer.toUpperCase()}: POINT PLAYER!`
         playerScore.textContent = Number(playerScore.textContent) + 1
         checkWinner(Number(playerScore.textContent), Number(computerScore.textContent))
     } else if (computer === 'rock' && player === 'scissor' || computer === 'paper' && player === 'rock' || computer === 'scissor' && player === 'paper') {
-        p.textContent = 'POINT COMPUTER'
+        p.textContent = `${computer.toUpperCase()} BEATS ${player.toUpperCase()}: POINT COMPUTER!`
         computerScore.textContent = Number(computerScore.textContent) + 1
         checkWinner(Number(playerScore.textContent), Number(computerScore.textContent))
     } else {
-        p.textContent = 'DRAW NO POINT'
+        p.textContent = 'DRAW NO POINT!'
     }
 }
 
