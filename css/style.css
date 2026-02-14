@@ -86,3 +86,31 @@ div {
 .player {
     border-right: solid rgb(180, 151, 113) 3px;
 }
+/******************************************
+/* media
+/*******************************************/
+@media (min-width: 200px) and (max-width: 500px) {
+    .scoreboard {
+        margin: 0 1%;
+    }
+
+    span {
+        margin: 0 30%;
+    }
+
+    button {
+        margin: 0 1%;
+        width: 30%;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 1050px) {
+    .scoreboard {
+        margin: 0 15%;
+    }
+
+    button {
+        margin: 0 9%;
+        width: 15%;
+    }
+}
